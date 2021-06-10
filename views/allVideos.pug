@@ -1,0 +1,14 @@
+extends base
+
+block content 
+    #video-container.video-container
+         if files
+            each file in files
+                figure
+                    .thumbnail.card.card-body.card-header
+                        a(href=`/get-all-videos/${file.videoName}`)
+                            center
+                                img.thumbnailImage(src=`/get-thumbnail/${file.Thumbnail}` alt=`${file.videoName}` )
+                                figcaption=`${file.caption}`
+
+

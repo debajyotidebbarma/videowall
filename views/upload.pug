@@ -1,0 +1,14 @@
+extends base
+
+
+block content
+    .container
+        .row
+            .col-md-6.m-auto
+                h1.text-center.display-4.my-4 Upload your video file here
+                form(action='/upload-videos' method='POST' enctype='multipart/form-data')
+                    .custom-file.mb-3
+                        input#file.custom-file-input(type='file' accept='image/* video/*' name='file' multiple)
+                        label.custom-file-label(for='file') choose video and Thumbnail *Choose thumbnail first
+                        
+                    input.btn.btn-primary.btn-green.btn-block(type='submit' value='upload')
